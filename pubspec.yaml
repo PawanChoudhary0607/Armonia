@@ -1,0 +1,54 @@
+name: armonia
+description: A premium music streaming app built with Flutter.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  flutter_riverpod: ^2.5.1
+
+  # Navigation
+  go_router: ^14.2.0
+
+  # Local storage
+  shared_preferences: ^2.3.3
+
+  # Typography
+  google_fonts: ^6.2.1
+
+  # UI
+  cupertino_icons: ^1.0.8
+
+  # Audio playback engine
+  just_audio: ^0.9.43
+
+  # OS media session integration (lock screen, notification, background audio)
+  # Required by audio_handler.dart — must match just_audio's expectations.
+  audio_service: ^0.18.17
+
+  # YouTube stream extraction (PINNED — do not upgrade: v3 requires deno runtime)
+  youtube_explode_dart: 2.5.3
+
+  # ── Phase 6B — Supabase Authentication ──────────────────────────────────────
+  # Official Supabase Flutter SDK. Provides Auth, session management,
+  # and token refresh. Database / Storage / Realtime not used this phase.
+  supabase_flutter: ^2.7.0
+
+  # Google Sign-In — required for OAuth flow on Android and iOS.
+  # Supabase uses the id_token from google_sign_in to complete the OAuth
+  # exchange without a browser redirect on mobile.
+  google_sign_in: ^6.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
